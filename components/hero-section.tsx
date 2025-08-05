@@ -12,7 +12,7 @@ export default function HeroSection() {
   ]
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 h-screen">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 min-h-screen">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
