@@ -107,7 +107,7 @@ export default function HeroSection() {
             {badges.map((badge, index) => (
               <span
                 key={badge}
-                className="badge animate-bounce-subtle"
+                className="badge animate-bounce-subtle///"
                 style={{ animationDelay: `${800 + index * 100}ms` }}
               >
                 {badge}
@@ -118,7 +118,7 @@ export default function HeroSection() {
           <div className="flex items-center justify-center gap-x-6 animate-fade-in-up animation-delay-1000">
             <Link
               href="/about"
-              className="group rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 animate-pulse-glow"
+              className="group rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 animate-pulse-glow///"
             >
               Tìm hiểu thêm
             </Link>
