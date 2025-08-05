@@ -2,70 +2,134 @@
 
 import { ArrowRight, Code, Trophy, Users, Zap } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import AnimatedHeading from "./AnimatedHeading"
 
 export default function HeroSection() {
-  const stats = [
-    { label: "Thành viên", value: "5+", icon: Users },
-    { label: "Dự án", value: "1+", icon: Code },
-    { label: "Giải thưởng", value: "1+", icon: Trophy },
-    { label: "Hackathon", value: "1+", icon: Zap },
-  ]
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100,
+      })
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => window.removeEventListener("mousemove", handleMouseMove)
+  }, [])
+
+  const badges = ["Lập trình thi đấu", "Phát triển Web/App", "Trí tuệ nhân tạo", "Nghiên cứu khoa học sinh viên"]
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 min-h-screen">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            <span className="font-extrabold text-6xl text-gray-900">
-              <span>CS</span>
-              <span className="dark-blue-text">S</span>
-              <span className="dark-red-text">O</span>
-              <span className="dark-blue-text">T</span>
-            </span>
-            <br />
-            <span className="text-2xl sm:text-4xl font-normal text-gray-600">Computer Science Student of</span>
-            <br />
-            <span className="text-2xl sm:text-4xl font-normal text-gray-600">Ton Duc Thang University</span>
-          </h1>
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 h-screen overflow-hidden flex items-center justify-center">
+      {/* Animated Background Patterns */}
+      <div className="absolute inset-0">
+        {/* Moving Grid Pattern */}
+        <div className="absolute inset-0 bg-moving-grid opacity-10"></div>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-            Team lập trình viên tại <b className="text-scale-up inline-block">Đại học Tôn Đức Thắng</b>, 
-            chuyên về <b className="text-scale-up inline-block">thi đấu lập trình</b>, {" "}
-            <b className="text-scale-up inline-block">hackathon</b>, {" "}
-            <b className="text-scale-up inline-block">phát triển web</b>, {" "}
-            <b className="text-scale-up inline-block">AI</b> và {" "}
-            <b className="text-scale-up inline-block">nghiên cứu khoa học sinh viên</b>.
+        {/* Floating Geometric Shapes */}
+        <div className="absolute inset-0">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className={`absolute animate-float-${i + 1} opacity-20`}
+              style={{
+                left: `${10 + i * 15}%`,
+                top: `${20 + i * 10}%`,
+                animationDelay: `${i * 0.5}s`,
+              }}
+            >
+              <div
+                className={`w-${8 + i * 2} h-${8 + i * 2} bg-gradient-to-br from-blue-400 to-purple-400 rounded-full blur-sm`}
+              ></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Animated Dots */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute animate-pulse-slow opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+              }}
+            >
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Interactive Mouse Follow Effect */}
+        <div
+          className="absolute w-96 h-96 bg-gradient-radial from-blue-200/30 to-transparent rounded-full blur-3xl transition-all duration-1000 ease-out pointer-events-none"
+          style={{
+            left: `${mousePosition.x}%`,
+            top: `${mousePosition.y}%`,
+            transform: "translate(-50%, -50%)",
+          }}
+        ></div>
+      </div>
+
+      {/* Animated Blobs */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+      <div className="absolute top-10 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+
+      {/* Rotating Geometric Elements */}
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 opacity-10">
+        <div className="w-full h-full border-2 border-blue-400 rotate-45 animate-spin-slow"></div>
+      </div>
+      <div className="absolute top-1/4 right-1/4 w-24 h-24 opacity-10">
+        <div className="w-full h-full border-2 border-purple-400 animate-spin-reverse"></div>
+      </div>
+      <div className="absolute bottom-1/3 left-1/4 w-10 h-10 opacity-10">
+        <div className="w-full h-full border-2 border-purple-400 animate-spin-reverse"></div>
+      </div>
+      <div className="absolute bottom-1/5 right-1/4 w-50 h-50 opacity-10">
+        <div className="w-full h-full border-2 border-purple-400 animate-spin-reverse"></div>
+      </div>      
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-center w-full h-full">
+        <div className="text-center px-5 md:px-20 space-y-6">
+          <AnimatedHeading />
+
+          <p className="mx-auto max-w-4xl text-lg sm:text-xl leading-8 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
+            Team lập trình viên tại Đại học Tôn Đức Thắng được thành lập nhằm tham gia các lĩnh vực
           </p>
 
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="flex flex-wrap justify-center gap-3 animate-fade-in-up animation-delay-700">
+            {badges.map((badge, index) => (
+              <span
+                key={badge}
+                className="badge animate-bounce-subtle"
+                style={{ animationDelay: `${800 + index * 100}ms` }}
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center gap-x-6 animate-fade-in-up animation-delay-1000">
             <Link
               href="/about"
-              className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+              className="group rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 animate-pulse-glow"
             >
               Tìm hiểu thêm
             </Link>
             <Link
               href="/contact"
-              className="text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors"
+              className="group text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors duration-200"
             >
-              Tham gia team <ArrowRight className="h-4 w-4" />
+              Tham gia
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200 animate-bounce-x" />
             </Link>
           </div>
-        </div>
-
-        {/* Stats */}
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
-                  <stat.icon className="h-6 w-6" />
-                </div>
-                <dt className="text-base leading-7 text-gray-600">{stat.label}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
     </section>
