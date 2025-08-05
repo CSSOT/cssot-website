@@ -10,9 +10,9 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const navigation = [
-    { name: "Trang chủ", href: "/", icon: Code },
-    { name: "Về chúng tôi", href: "/about", icon: Users },
-    { name: "Sản phẩm", href: "/projects", icon: BookOpen },
+    { name: "Home", href: "/", icon: Code },
+    { name: "About us", href: "/about", icon: Users },
+    { name: "Products", href: "/products", icon: BookOpen },
   ]
 
   useEffect(() => {

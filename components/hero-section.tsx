@@ -20,7 +20,7 @@ export default function HeroSection() {
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
-  const badges = ["Lập trình thi đấu", "Phát triển Web/App", "Trí tuệ nhân tạo", "Nghiên cứu khoa học sinh viên"]
+  const badges = ["Artificial Intelligence", "Applications Development", "Competitive Programming", "Student Science Research"]
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 h-screen overflow-hidden flex items-center justify-center">
@@ -100,7 +100,7 @@ export default function HeroSection() {
           <AnimatedHeading />
 
           <p className="mx-auto max-w-4xl text-lg sm:text-xl leading-8 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
-            Team lập trình viên tại Đại học Tôn Đức Thắng được thành lập nhằm tham gia các lĩnh vực
+            A collaborative hub for computer science students at Ton Duc Thang University to participate these fields
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 animate-fade-in-up animation-delay-700">
@@ -120,13 +120,13 @@ export default function HeroSection() {
               href="/about"
               className="group rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 animate-pulse-glow///"
             >
-              Tìm hiểu thêm
+              More thing about us
             </Link>
             <Link
               href="/contact"
               className="group text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors duration-200"
             >
-              Tham gia
+              Contact
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200 animate-bounce-x" />
             </Link>
           </div>
