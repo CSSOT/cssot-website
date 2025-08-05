@@ -100,7 +100,7 @@ export default function HeroSection() {
           <AnimatedHeading />
 
           <p className="mx-auto max-w-4xl text-lg sm:text-xl leading-8 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
-            A collaborative hub for computer science students at Ton Duc Thang University to participate these fields
+            A collaborative hub for computer science students to participate these fields
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 animate-fade-in-up animation-delay-700">
