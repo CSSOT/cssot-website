@@ -17,7 +17,7 @@ export default function HeroSection() {
           </div>
 
           <p className="text-lg sm:text-2xl leading-10 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
-            A collaborative hub for Computer Science students to explore, learn, and innovate in these key areas:&nbsp;
+            A collaborative hub for Computer Science students to explore, learn, and innovate in
             {badges.map((badge, index) => (
               <span
                 key={badge}

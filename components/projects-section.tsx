@@ -1,9 +1,6 @@
-import { Github, Code, Trophy, Users, Lightbulb, BookOpen, Zap } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { useEffect, useRef } from "react"
-import { useInView } from "@/hooks/use-in-view"
 
 export default function ProjectSection() {
   const projects = [
@@ -12,7 +9,7 @@ export default function ProjectSection() {
       field: "applications development",
       title: "Notema",
       description: "A sophisticated note-taking and management system designed for students and professionals. Features include real-time collaboration, markdown support, smart categorization, and end-to-end encryption. Built with a modern tech stack ensuring high performance and security.",
-      image: "null",
+      image: "https://picsum.photos/640/400",
       github: "https://github.com/CSSOT/notema",
       demo: "https://notema.io.vn",
       tags: ["ReactJS", "SlimPHP", "Tailwind CSS", "MySQL", "WebSocket", "Redux"]
@@ -22,7 +19,7 @@ export default function ProjectSection() {
       field: "artificial intelligence",
       title: "athStock",
       description: "An advanced stock analysis platform leveraging artificial intelligence to provide real-time market insights. Integrates natural language processing for sentiment analysis of financial news, technical analysis tools, and machine learning models for price prediction. Features include real-time data visualization, automated trading signals, and personalized portfolio recommendations.",
-      image: "null",
+      image: "https://picsum.photos/640/400",
       github: "https://github.com/CSSOT/athStock",
       demo: "https://athstock.io.vn",
       tags: ["FastAPI", "ReactJS", "WebSocket", "VNStock", "NLP", "TensorFlow", "PostgreSQL"]
@@ -32,7 +29,7 @@ export default function ProjectSection() {
       field: "applications development",
       title: "SaiGon Figure",
       description: "A comprehensive e-commerce platform specialized in anime figure collecting and trading. Features include real-time inventory management, advanced search with filtering, secure payment integration, and a community forum. The platform also offers pre-order management, authenticity verification, and a recommendation system based on user preferences.",
-      image: "null",
+      image: "https://picsum.photos/640/400",
       github: "https://github.com/CSSOT/saigon-figure",
       demo: "https://saigonfigure.io.vn",
       tags: ["ReactJS", "ExpressJS", "MongoDB", "JavaScript", "Redux", "Stripe", "AWS"]
@@ -42,7 +39,7 @@ export default function ProjectSection() {
       field: "applications development",
       title: "Fb58",
       description: "A modern web platform designed for seamless football pitch booking and management. It allows users to browse available time slots, book pitches in real-time, and receive instant booking confirmations. The system includes a comprehensive admin dashboard that supports pitch schedule management, revenue tracking, user analytics, and customer service tools.",
-      image: "null",
+      image: "https://picsum.photos/640/400",
       github: "https://github.com/CSSOT/fb58",
       demo: "https://fb58.io.vn",
       tags: ["ReactJS", "ExpressJS", "MongoDB", "JavaScript", "Redux", "Stripe", "AWS"]
