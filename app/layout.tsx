@@ -5,17 +5,15 @@ import "./globals.css" // Runtime import: CSS file
 
 const inter = Inter({ subsets: ["latin"] })
 
-// Metadata chỉ được dùng để type annotation, không phải runtime value
 export const metadata: Metadata = {
   title: "CSSOT - Computer Science Student of Ton Duc Thang University",
-  description: "Team lập trình viên thi đấu, hackathon và nghiên cứu khoa học tại Đại học Tôn Đức Thắng",
+  description: "",
 }
 
-// React.ReactNode cũng chỉ là type annotation
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode // Type annotation
+  children: React.ReactNode
 }) {
   return (
     <html lang="vi">
