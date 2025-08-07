@@ -17,7 +17,7 @@ export default function AnimatedBackground() {
   }, [])
 
   return (
-    <div className="">
+    <div className="fixed inset-0 w-full h-full -z-10">
       {/* Animated Background Patterns */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Moving Grid Pattern */}

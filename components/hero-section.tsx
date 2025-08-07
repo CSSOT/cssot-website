@@ -9,10 +9,9 @@ export default function HeroSection() {
   const badges = ["Artificial Intelligence", "Applications Development"]
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 h-screen overflow-hidden items-center justify-center">    
-      <AnimatedBackground/>
+    <section className="relative h-screen overflow-hidden items-center justify-center">    
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-center w-full h-full">
-        <div className="text-left px-5 md:px-20 space-y-6 max-w-6xl">
+        <div className="text-left px-5 md:px-20 space-y-6 max-w-7xl">
           <div className="h-[100px] sm:h-[120px] lg:h-full">
             <AnimatedHeading />
           </div>
@@ -40,7 +39,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="/contact"
-              className="group text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors duration-200"
+              className="text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors duration-200"
             >
               Contact
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200 animate-bounce-x" />

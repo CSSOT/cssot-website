@@ -8,7 +8,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ["www.vinai.io", "www.istockphoto.com"],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
