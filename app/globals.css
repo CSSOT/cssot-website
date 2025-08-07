@@ -140,7 +140,6 @@
   font-weight: 600;
 
 }
-
 .text-scale-up:hover {
   color: #15489D;
   text-shadow: 0 1px 2px rgba(21, 72, 157, 0.2);
@@ -155,6 +154,23 @@
 .hover-zoom:hover {
   transform: scale(1.1);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.light-text {
+  color: #d1d5dc;
+}
+
+.light-text:hover {
+  color: #2767d4;
+  cursor: pointer;
+}
+
+.dark-text {
+  color: #000000
+}
+
+.dark-text:hover {
+  color: #15489D;
 }
 
 @layer components {

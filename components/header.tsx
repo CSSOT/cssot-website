@@ -12,7 +12,7 @@ export default function Header() {
   const navigation = [
     { name: "Home", href: "/", icon: Code },
     { name: "About us", href: "/about", icon: Users },
-    { name: "Products", href: "/products", icon: BookOpen },
+    { name: "Projects", href: "/projects", icon: BookOpen },
   ]
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 dark-text px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -81,7 +81,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                  className="text-gray-600 dark-text block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
