@@ -97,7 +97,7 @@ export default function HeroSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-start w-full h-full">
         <div className="text-left px-5 md:px-20 space-y-6 max-w-6xl">
-          <div className="">
+          <div className="h-[100px] sm:h-[120px] lg:h-full">
             <AnimatedHeading />
           </div>
 
@@ -106,7 +106,7 @@ export default function HeroSection() {
             {badges.map((badge, index) => (
               <span
                 key={badge}
-                className="dark-blue-text font-semibold decoration-blue-400 decoration-2 mx-1 inline-block animate-fade-in-up"
+                className="dark-blue-text font-semibold decoration-blue-400 decoration-2 mr-1 inline-block animate-fade-in-up"
                 style={{ animationDelay: `${800 + index * 100}ms` }}
               >
                 {badge}
