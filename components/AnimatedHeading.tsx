@@ -30,7 +30,7 @@ export default function TypewriterHeading() {
   return (
     <h1
       className={`
-        text-2xl sm:text-4xl font-semibold text-center pt-10
+        text-2xl sm:text-4xl font-semibold text-start pt-10
         text-transparent bg-clip-text
         bg-gradient-to-r from-blue-800 via-red-500 to-purple-600
       `}

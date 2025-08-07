@@ -20,10 +20,10 @@ export default function HeroSection() {
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
-  const badges = ["Artificial Intelligence", "Applications Development", "Competitive Programming", "Student Science Research"]
+  const badges = ["Artificial Intelligence", "Applications Development"]
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 h-screen overflow-hidden flex items-center justify-center">
+    <section className="relative bg-gradient-to-br/// from-blue-50/// via-white/// to-indigo-50/// h-screen overflow-hidden flex items-center justify-start">
       {/* Animated Background Patterns */}
       <div className="absolute inset-0">
         {/* Moving Grid Pattern */}
@@ -95,15 +95,27 @@ export default function HeroSection() {
         <div className="w-full h-full border-2 border-purple-400 animate-spin-reverse"></div>
       </div>      
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-center w-full h-full">
-        <div className="text-center px-5 md:px-20 space-y-6">
-          <AnimatedHeading />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-start w-full h-full">
+        <div className="text-left px-5 md:px-20 space-y-6 max-w-6xl">
+          <div className="">
+            <AnimatedHeading />
+          </div>
 
-          <p className="mx-auto max-w-4xl text-lg sm:text-xl leading-8 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
-            A collaborative hub for computer science students to participate these fields
+          <p className="text-lg sm:text-2xl leading-10 font-medium text-gray-700 animate-fade-in-up animation-delay-500">
+            A collaborative hub for Computer Science students to explore, learn, and innovate in these key areas:&nbsp;
+            {badges.map((badge, index) => (
+              <span
+                key={badge}
+                className="dark-blue-text font-semibold decoration-blue-400 decoration-2 mx-1 inline-block animate-fade-in-up"
+                style={{ animationDelay: `${800 + index * 100}ms` }}
+              >
+                {badge}
+                {index !== badges.length - 1 ? "," : ""}
+              </span>
+            ))}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-3 animate-fade-in-up animation-delay-700">
+          {/* <div className="flex flex-wrap gap-3 animate-fade-in-up animation-delay-700">
             {badges.map((badge, index) => (
               <span
                 key={badge}
@@ -113,9 +125,9 @@ export default function HeroSection() {
                 {badge}
               </span>
             ))}
-          </div>
+          </div> */}
 
-          <div className="flex items-center justify-center gap-x-6 animate-fade-in-up animation-delay-1000">
+          <div className="flex items-center gap-x-6 animate-fade-in-up animation-delay-1000">
             <Link
               href="/about"
               className="group rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 animate-pulse-glow///"
